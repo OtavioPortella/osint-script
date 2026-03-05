@@ -1,0 +1,79 @@
+# === SOC-TI CONFIG ===
+
+# Lista de domínios e emails fica em:
+# - assets/domains.txt
+# - assets/emails.txt
+
+# Caminhos das ferramentas clonadas (ajuste se seu caminho for diferente)
+paths:
+  dnstwist: "/root/osint-tools/dnstwist/dnstwist.py"
+  leaksearch: "/root/osint-tools/LeakSearch/LeakSearch.py"
+
+# OTX (opcional)
+# Recomendo usar variável de ambiente OTX_API_KEY.
+# Se preferir, coloque aqui também:
+otx:
+  api_key: "ea9e848681c494b135b4409c33d1607c333d13bfcde26ea25968a6fc84668621"   # ex: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  enabled: true
+
+# LeakCheck public API (sem chave) - limite de chamadas
+leakcheck:
+  enabled: true
+  sleep_seconds: 1.2
+  max_emails: 200
+
+# theHarvester
+harvester:
+  enabled: true
+  limit: 200
+  sources:
+    - "duckduckgo"
+    - "crtsh"
+
+# Holehe
+holehe:
+  enabled: true
+  prefixes:
+    - "contato"
+    - "financeiro"
+    - "suporte"
+    - "admin"
+    - "rh"
+    - "ti"
+    - "comercial"
+    - "faturamento"
+
+# Cert transparency (crt.sh)
+crtsh:
+  enabled: true
+
+# Typosquat (DNSTwist)
+typosquat:
+  enabled: true
+
+# LeakSearch
+leaksearch:
+  enabled: true
+
+# Filtro de importância do output
+output:
+  min_severity: "medium"   # low | medium | high | critical
+  mask_passwords_in_txt: true
+
+# Palavras-chave para marcar subdomínios como suspeitos
+suspicious_keywords:
+  - "login"
+  - "sso"
+  - "auth"
+  - "vpn"
+  - "mail"
+  - "webmail"
+  - "owa"
+  - "admin"
+  - "portal"
+  - "secure"
+  - "support"
+  - "billing"
+  - "finance"
+  - "accounts"
+  - "autodiscover"
