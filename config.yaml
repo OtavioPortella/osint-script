@@ -13,7 +13,7 @@ paths:
 # Recomendo usar variável de ambiente OTX_API_KEY.
 # Se preferir, coloque aqui também:
 otx:
-  api_key: "ea9e848681c494b135b4409c33d1607c333d13bfcde26ea25968a6fc84668621"   # ex: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  api_key: ""   # ex: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   enabled: true
 
 # LeakCheck public API (sem chave) - limite de chamadas
